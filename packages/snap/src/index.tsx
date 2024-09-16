@@ -70,6 +70,13 @@ const medievalMap = {
   'u': '𝔲', 'v': '𝔳', 'w': '𝔴', 'x': '𝔵', 'y': '𝔶', 'z': '𝔷'
 };
 
+const smallCapsMap = {
+  'a': 'ᴀ', 'b': 'ʙ', 'c': 'ᴄ', 'd': 'ᴅ', 'e': 'ᴇ', 
+  'f': 'ꜰ', 'g': 'ɢ', 'h': 'ʜ', 'i': 'ɪ', 'j': 'ᴊ', 
+  'k': 'ᴋ', 'l': 'ʟ', 'm': 'ᴍ', 'n': 'ɴ', 'o': 'ᴏ', 
+  'p': 'ᴘ', 'q': 'ǫ', 'r': 'ʀ', 's': 'ꜱ', 't': 'ᴛ', 
+  'u': 'ᴜ', 'v': 'ᴠ', 'w': 'ᴡ', 'x': 'x', 'y': 'ʏ', 'z': 'ᴢ'
+};
 
 // Function to transform input text using a given font map
 function transformToFont(text:string, fontMap:any) {
@@ -106,12 +113,12 @@ export const onUserInput: OnUserInputHandler = async ({ id, event }) => {
         ui: (
           <Box>
             <InteractiveForm />
-            <Divider></Divider>
             <Copyable value={transformToFont(''+event.value['input-text'],boldSerifMap)}/>
             <Copyable value={transformToFont(''+event.value['input-text'],boldSansSerifMap)}/>
             <Copyable value={transformToFont(''+event.value['input-text'],doubleStruckMap)}/>
             <Copyable value={transformToFont(''+event.value['input-text'],italicMap)}/>
             <Copyable value={transformToFont(''+event.value['input-text'],medievalMap)}/>
+            <Copyable value={transformToFont(''+event.value['input-text'],smallCapsMap)}/>
           </Box>
         )
       },
