@@ -25,11 +25,12 @@
           font-size:1.5rem;
           line-height:64px; 
           padding:0;
-          margin-bottom:32px;
+          margin-bottom:16px;
         }
-        h1 img { 
-          vertical-align:top;
-          margin-top:-8px; 
+        #icon { display:inline-block; width:48px; height:48px; border-radius:24px; border:1px solid #000; overflow:hidden;}
+        h1 #icon { 
+          vertical-align:middle;
+          margin-top:-12px; 
         }
         h2 { 
           font-size:1.125rem;
@@ -90,7 +91,7 @@
           <source src="demo.mp4" type="video/mp4" />
         </video>
       </div>
-      <h1><img src="icon.png" width="64" height="64" alt=""> Text Transformer</h1>
+      <h1><span id="icon"><img src="icon.png" width="48" height="48" alt=""></span> Text Transformer</h1>
       <p>𝔗𝔯𝔞𝔫𝔰𝔣𝔬𝔯𝔪 𝑦𝑜𝑢𝑟 𝕥𝕖𝕩𝕥 in MetaMask.</em></p>
       <p id="loading">Loading...</p>
       <p>After installing the Snap, open the Snaps menu in MetaMask and click on Text Transformer to try it.</p>
