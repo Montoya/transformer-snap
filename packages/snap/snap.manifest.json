@@ -4,10 +4,10 @@
   "proposedName": "Text Transformer",
   "repository": {
     "type": "git",
-    "url": "https://github.com/MetaMask/template-snap-monorepo.git"
+    "url": "https://github.com/Montoya/transformer-snap.git"
   },
   "source": {
-    "shasum": "pU8QrnLQvhskq1YkW/f4Gh65iN0oPSZLyEZ/VijOTVY=",
+    "shasum": "AQ51+EuV4nFhTbEprlUgfnFrlYh65sV7T6Cey62eWvc=",
     "location": {
       "npm": {
         "filePath": "dist/bundle.js",
