@@ -83,6 +83,11 @@ function transformToFont(text:string, fontMap:any) {
   return text.split('').map(char => fontMap[char] || char).join('');
 }
 
+function strikethroughText(text:string) {
+  const strikethroughChar = '\u0336'; // Combining long stroke overlay
+  return text.split('').map(char => char + strikethroughChar).join('');
+}
+
 const InteractiveForm: SnapComponent = () => {
   return (
     <Form name="input-form">
@@ -119,6 +124,7 @@ export const onUserInput: OnUserInputHandler = async ({ id, event }) => {
             <Copyable value={transformToFont(''+event.value['input-text'],italicMap)}/>
             <Copyable value={transformToFont(''+event.value['input-text'],medievalMap)}/>
             <Copyable value={transformToFont(''+event.value['input-text'],smallCapsMap)}/>
+            <Copyable value={strikethroughText(''+event.value['input-text'])}/>
           </Box>
         )
       },
